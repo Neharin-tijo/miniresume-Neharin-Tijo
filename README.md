@@ -8,6 +8,7 @@ A FastAPI-based REST API for managing candidate resumes with in-memory storage.
 - Store candidate metadata
 - Filter candidates by skill, experience, graduation year
 - Get candidate by ID
+- Update candidate
 - Delete candidate
 - In-memory storage (no database required)
 
@@ -17,21 +18,21 @@ A FastAPI-based REST API for managing candidate resumes with in-memory storage.
 ## Installation
 
 1. Clone the repository:
-```bash
+
 git clone <your-repo-url>
 cd <repo-name>
 
 2. Create virtual environment:
-```bash
+
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 3. Install dependencies:
-```bash
+
 pip install -r requirements.txt
 
 ## Running the Application
-``bash
+
 python run.py
 
 The server will start at http://localhost:8000
@@ -54,7 +55,7 @@ GET	/health	Health check
 ## Example API Requests
 
 # Create Candidate
-```bash
+
 curl -X POST "http://localhost:8000/api/candidates/" \
   -F "full_name=John Doe" \
   -F "dob=1990-01-01" \
@@ -67,7 +68,7 @@ curl -X POST "http://localhost:8000/api/candidates/" \
   -F "resume=@resume.pdf"
 
 ## List Candidates with Filters
-```bash
+
 # All candidates
 curl "http://localhost:8000/api/candidates/"
 
@@ -81,17 +82,17 @@ curl "http://localhost:8000/api/candidates/?experience=5"
 curl "http://localhost:8000/api/candidates/?graduation_year=2012"
 
 ## Get Candidate by ID
-```bash
+
 curl "http://localhost:8000/api/candidates/1"
 
 ## Update Candidate
-```bash
+
 curl -X PUT "http://localhost:8000/api/candidates/1" \
   -H "Content-Type: application/json" \
   -d '{"years_of_experience": 9, "skill_set": ["Python","FastAPI","Docker"]}'
 
 ## Delete Candidate
-```bash
+
 curl -X DELETE "http://localhost:8000/api/candidates/1"
 
 ## Example Response
@@ -110,4 +111,3 @@ json
   "created_at": "2026-02-17T12:34:56.789Z",
   "updated_at": "2026-02-17T12:34:56.789Z"
 }
-
