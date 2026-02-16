@@ -19,7 +19,6 @@ A FastAPI-based REST API for managing candidate resumes with in-memory storage.
 1. Clone the repository:
 ```bash
 git clone <your-repo-url>
-
 cd <repo-name>
 
 2. Create virtual environment:
@@ -111,3 +110,4 @@ json
   "created_at": "2026-02-17T12:34:56.789Z",
   "updated_at": "2026-02-17T12:34:56.789Z"
 }
+
