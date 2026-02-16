@@ -44,13 +44,14 @@ A FastAPI-based REST API for managing candidate resumes with in-memory storage.
 
 ## API Endpoints
 
-    Method	Endpoint	Description
-    POST	/api/candidates/	Upload new candidate with resume
-    GET	/api/candidates/	List all candidates (with filters)
-    GET	/api/candidates/{id}	Get candidate by ID
-    PUT	/api/candidates/{id}	Update candidate
-    DELETE	/api/candidates/{id}	Delete candidate
-    GET	/health	Health check
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/candidates/` | Upload new candidate with resume |
+| GET | `/api/candidates/` | List all candidates (with filters) |
+| GET | `/api/candidates/{id}` | Get candidate by ID |
+| PUT | `/api/candidates/{id}` | Update candidate |
+| DELETE | `/api/candidates/{id}` | Delete candidate |
+| GET | `/health` | Health check |
 
 ## Example API Requests
 
@@ -97,18 +98,19 @@ A FastAPI-based REST API for managing candidate resumes with in-memory storage.
 
 ### Example Response
 
-    json
-    {
-    "id": 1,
-    "full_name": "John Doe",
-    "dob": "1990-01-01",
-    "contact_number": "+1234567890",
-    "contact_address": "123 Main St",
-    "education_qualification": "BSc CS",
-    "graduation_year": 2012,
-    "years_of_experience": 8,
-    "skill_set": ["Python", "FastAPI"],
-    "resume_path": "uploads/John_Doe_20260217_123456_abc123.pdf",
-    "created_at": "2026-02-17T12:34:56.789Z",
-    "updated_at": "2026-02-17T12:34:56.789Z"
-    }
+```json
+{
+  "id": 1,
+  "full_name": "John Doe",
+  "dob": "1990-01-01",
+  "contact_number": "+1234567890",
+  "contact_address": "123 Main St",
+  "education_qualification": "BSc CS",
+  "graduation_year": 2012,
+  "years_of_experience": 8,
+  "skill_set": ["Python", "FastAPI"],
+  "resume_path": "uploads/John_Doe_20260217_123456_abc123.pdf",
+  "created_at": "2026-02-17T12:34:56.789Z",
+  "updated_at": "2026-02-17T12:34:56.789Z"
+}
+```
