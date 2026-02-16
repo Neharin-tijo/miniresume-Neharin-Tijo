@@ -112,22 +112,3 @@ A FastAPI-based REST API for managing candidate resumes with in-memory storage.
     "created_at": "2026-02-17T12:34:56.789Z",
     "updated_at": "2026-02-17T12:34:56.789Z"
     }
-
-## Project Structure
-
-├── app/
-│   ├── __init__.py
-│   ├── main.py
-│   ├── schemas.py
-│   ├── state.py
-│   ├── crud.py
-│   ├── routers/
-│   │   ├── __init__.py
-│   │   └── candidates.py
-│   └── utils/
-│       ├── __init__.py
-│       └── file_handler.py
-├── uploads/                  # Uploaded resume files
-├── requirements.txt
-├── run.py
-└── README.md
